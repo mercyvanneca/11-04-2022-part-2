@@ -43,6 +43,13 @@
             this.Label_Capacity = new System.Windows.Forms.Label();
             this.Label_OutputStadium = new System.Windows.Forms.Label();
             this.Label_OutputCapacity = new System.Windows.Forms.Label();
+            this.Lbl_Tgl = new System.Windows.Forms.Label();
+            this.Lbl_Skor = new System.Windows.Forms.Label();
+            this.Btn_Check = new System.Windows.Forms.Button();
+            this.Lbl_OutputTgl = new System.Windows.Forms.Label();
+            this.Lbl_OutputSkor = new System.Windows.Forms.Label();
+            this.Data_Output = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Data_Output)).BeginInit();
             this.SuspendLayout();
             // 
             // CB_TimB
@@ -173,6 +180,7 @@
             this.Label_OutputStadium.Size = new System.Drawing.Size(16, 13);
             this.Label_OutputStadium.TabIndex = 13;
             this.Label_OutputStadium.Text = "...";
+            this.Label_OutputStadium.Click += new System.EventHandler(this.Label_OutputStadium_Click);
             // 
             // Label_OutputCapacity
             // 
@@ -182,12 +190,76 @@
             this.Label_OutputCapacity.Size = new System.Drawing.Size(16, 13);
             this.Label_OutputCapacity.TabIndex = 14;
             this.Label_OutputCapacity.Text = "...";
+            this.Label_OutputCapacity.Click += new System.EventHandler(this.Label_OutputCapacity_Click);
+            // 
+            // Lbl_Tgl
+            // 
+            this.Lbl_Tgl.AutoSize = true;
+            this.Lbl_Tgl.Location = new System.Drawing.Point(129, 285);
+            this.Lbl_Tgl.Name = "Lbl_Tgl";
+            this.Lbl_Tgl.Size = new System.Drawing.Size(52, 13);
+            this.Lbl_Tgl.TabIndex = 15;
+            this.Lbl_Tgl.Text = "Tanggal :";
+            // 
+            // Lbl_Skor
+            // 
+            this.Lbl_Skor.AutoSize = true;
+            this.Lbl_Skor.Location = new System.Drawing.Point(129, 308);
+            this.Lbl_Skor.Name = "Lbl_Skor";
+            this.Lbl_Skor.Size = new System.Drawing.Size(38, 13);
+            this.Lbl_Skor.TabIndex = 16;
+            this.Lbl_Skor.Text = "Skor : ";
+            // 
+            // Btn_Check
+            // 
+            this.Btn_Check.Location = new System.Drawing.Point(217, 256);
+            this.Btn_Check.Name = "Btn_Check";
+            this.Btn_Check.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Check.TabIndex = 17;
+            this.Btn_Check.Text = "Check";
+            this.Btn_Check.UseVisualStyleBackColor = true;
+            this.Btn_Check.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Lbl_OutputTgl
+            // 
+            this.Lbl_OutputTgl.AutoSize = true;
+            this.Lbl_OutputTgl.Location = new System.Drawing.Point(182, 285);
+            this.Lbl_OutputTgl.Name = "Lbl_OutputTgl";
+            this.Lbl_OutputTgl.Size = new System.Drawing.Size(16, 13);
+            this.Lbl_OutputTgl.TabIndex = 18;
+            this.Lbl_OutputTgl.Text = "...";
+            this.Lbl_OutputTgl.Click += new System.EventHandler(this.Lbl_OutputTgl_Click);
+            // 
+            // Lbl_OutputSkor
+            // 
+            this.Lbl_OutputSkor.AutoSize = true;
+            this.Lbl_OutputSkor.Location = new System.Drawing.Point(182, 308);
+            this.Lbl_OutputSkor.Name = "Lbl_OutputSkor";
+            this.Lbl_OutputSkor.Size = new System.Drawing.Size(16, 13);
+            this.Lbl_OutputSkor.TabIndex = 19;
+            this.Lbl_OutputSkor.Text = "...";
+            this.Lbl_OutputSkor.Click += new System.EventHandler(this.Lbl_OutputSkor_Click);
+            // 
+            // Data_Output
+            // 
+            this.Data_Output.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Data_Output.Location = new System.Drawing.Point(12, 341);
+            this.Data_Output.Name = "Data_Output";
+            this.Data_Output.Size = new System.Drawing.Size(439, 218);
+            this.Data_Output.TabIndex = 20;
+            this.Data_Output.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Data_Output_CellContentClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 266);
+            this.ClientSize = new System.Drawing.Size(463, 571);
+            this.Controls.Add(this.Data_Output);
+            this.Controls.Add(this.Lbl_OutputSkor);
+            this.Controls.Add(this.Lbl_OutputTgl);
+            this.Controls.Add(this.Btn_Check);
+            this.Controls.Add(this.Lbl_Skor);
+            this.Controls.Add(this.Lbl_Tgl);
             this.Controls.Add(this.Label_OutputCapacity);
             this.Controls.Add(this.Label_OutputStadium);
             this.Controls.Add(this.Label_Capacity);
@@ -206,6 +278,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Data_Output)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +301,12 @@
         private System.Windows.Forms.Label Label_Capacity;
         private System.Windows.Forms.Label Label_OutputStadium;
         private System.Windows.Forms.Label Label_OutputCapacity;
+        private System.Windows.Forms.Label Lbl_Tgl;
+        private System.Windows.Forms.Label Lbl_Skor;
+        private System.Windows.Forms.Button Btn_Check;
+        private System.Windows.Forms.Label Lbl_OutputTgl;
+        private System.Windows.Forms.Label Lbl_OutputSkor;
+        private System.Windows.Forms.DataGridView Data_Output;
     }
 }
 

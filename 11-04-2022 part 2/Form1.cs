@@ -18,10 +18,11 @@ namespace _11_04_2022_part_2
             InitializeComponent();
         }
         public static string sqlConnection = "server=localhost;uid=root;pwd=;database=premier_league";
-        public MySqlConnection sqlConnect = new MySqlConnection(sqlConnection);
+        public MySqlConnection sqlConnect = new MySqlConnection(sqlConnection); 
         public MySqlCommand sqlCommand;
         public MySqlDataAdapter sqlAdapter;
         public string sqlQuery;
+
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -88,6 +89,41 @@ namespace _11_04_2022_part_2
         private void Label_OutputManagerB_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable stanggal = new DataTable();
+            sqlQuery = sqlQuery = "SELECT date_format(match_date, '%e %M %Y') as 'tanggal', concat(goal_home, '-', goal_away) AS 'skor' from match where team_home = '" + CB_TimA.SelectedValue.ToString() + "' and team_away = '" + CB_TimB.SelectedValue.ToString() + "'";
+            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+            sqlAdapter = new MySqlDataAdapter(sqlCommand);
+            sqlAdapter.Fill(stanggal);
+            Lbl_OutputTgl.Text = stanggal.Rows[0]["tanggal"].ToString();
+            Lbl_OutputSkor.Text = stanggal.Rows[0]["skor"].ToString();
+        }
+
+        private void Label_OutputStadium_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_OutputCapacity_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Data_Output_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Lbl_OutputTgl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_OutputSkor_Click(object sender, EventArgs e)
+        {
 
         }
     }
